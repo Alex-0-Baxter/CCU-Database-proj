@@ -38,6 +38,45 @@ CREATE TABLE Sandwhiches (
 			Sodium smallint default(0) null,
 			[Description] varchar(300) null
 			);
+CREATE TABLE Dog (
+	DogType_ID INT IDENTITY PRIMARY KEY
+	,DogName varchar(30) NOT NULL
+	,Price nchar(10) default(0) NOT NULL
+	,Cals varchar(10) default(0) NOT NULL
+	,Carbs varchar(10) default(0) NOT NULL
+	,Sodium varchar(10) default(0) NOT NULL
+	,DogDescription varchar(2000) NULL
+);
+
+CREATE TABLE Shake (
+	Shake_ID INT IDENTITY PRIMARY KEY
+	,ShakeName varchar(30) NOT NULL
+	,Price nchar(10) default(0) NULL
+	,Cals varchar(10) default(0) NOT NULL
+	,Carbs varchar(10) default(0) NOT NULL
+	,Sodium varchar(10) default(0) NOT NULL
+	,DogDescription varchar(2000) NULL
+
+);
+
+
+INSERT INTO Dog VALUES 
+	('Hot Dog','7.79' , '520', '40','1103', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior with any of your favorite toppings.'),
+	('Cheese Dog','8.89','590','40.5','1440', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior with a layer of American-style cheese on top and any of your favorite toppings'),
+	('Bacon Dog','8.59','600','40','1390', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior with a layer of apple-wood smoked bacon and any of your favorite toppings'),
+	('Bacon Cheese Dog','9.79','670','40.5','1700', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior, American-style cheese on top, a layer of apple-wood smoked bacon and any of your favorite toppings.')
+GO
+
+INSERT INTO Shake VALUES
+	('Bacon','6.09','80','0','260','Crispy, sweet applewood-smoked bacon chopped and mixed for a salty crunch in your shake.'),
+	('Bananas','6.09','30', '7-28','2-10','Real bananas in your handspun milkshake.'),
+	('Strawberries','6.09','20','0','5-20','Fresh strawberries in homemade simple syrup.'),
+	('Chocolate','6.09','40','8-32','10-39','Chocolate and fudge added to your handspun milkshake.'),
+	('Oreo Cookies','6.09','65','10-40','53-210','Crushed Oreo Cookies mixed with creamy malt.'),
+	('Penut Butter','6.09','90','4-16','110-440','Natural, creamy peanut butter with a touch of honey.'),
+	('Salted Caramel','6.09','45','10-41','24-98','Sweet caramel with a savory kick.'),
+	('Lotus Biscoff','6.09','0','0','0','Lotus’ classic caramelized cookie pieces.')
+GO
 
 INSERT INTO Toppings VALUES ('Mayo', '110', '0', '11', '70', 'A layer of mayonnaise, always evenly spread. Thick, smooth and never too much or too little, unless you ask for more or less!');
 INSERT INTO Toppings VALUES ('Lettuce', '5', '1', '0', '3', 'Our lettuce is torn by hand for optimum freshness and traction to hold the pickles on top.');
