@@ -1,3 +1,4 @@
+```SQL
 use master
 GO
 
@@ -17,3 +18,4 @@ CREATE TABLE Categories(
 	,Milkshakes varchar(26) NULL
 	,FK_Order_ID varchar(26) NULL
 );
+```
