@@ -8,7 +8,7 @@ CREATE DATABASE  The_Better_Team_DB
 GO
 
 CREATE TABLE Categories(
-	 Cat_ID tinyint NOT NULL
+	 Cat_ID tinyint NOT NULL PRIMARY KEY
 	,Burgers varchar(26) NULL
 	,Dogs varchar(26) NULL
 	,Sandwiches varchar(26) NULL
