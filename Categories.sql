@@ -55,7 +55,7 @@ CREATE TABLE Shake (
 	,Cals varchar(10) default(0) NOT NULL
 	,Carbs varchar(10) default(0) NOT NULL
 	,Sodium varchar(10) default(0) NOT NULL
-	,DogDescription varchar(2000) NULL
+	,ShakeDescription varchar(2000) NULL
 
 );
 
@@ -93,3 +93,21 @@ INSERT INTO Toppings VALUES ('Green Peppers', '5', '1', '0', '1','A row of fresh
 INSERT INTO Toppings VALUES ('BAR-B-QUE Sauce', '50', '15', '0', '400', 'Rich, smoky Cattlemen’s Brand BBQ sauce.');
 INSERT INTO Toppings VALUES ('Hot Sauce', '0', '0', '0', '200', 'Frank’s Original Hot Sauce – for an extra kick to your sandwiches.');
 INSERT INTO Toppings VALUES ('A1 Sauce', '15', '3', '0', '280', 'The classic A1 Original Steak Sauce.');
+
+CREATE TABLE Drink (
+	Drink_ID INT IDENTITY PRIMARY KEY
+	,DrinkName varchar(30) NOT NULL
+	,Price nchar(10) default(0) NULL
+	,Cals varchar(10) default(0) NOT NULL
+	,DrinkDescription varchar(2000) NULL
+);
+
+INSERT INTO Drink VALUES ('Regular', '2.95', '0-360')
+INSERT INTO Drink VALUES ('Large', '3.25', '0-520')
+INSERT INTO Drink VALUES ('Dasani', '2.95', '0')
+INSERT INTO Drink VALUES ('Bottles', '3.50', '0-240')
+INSERT INTO Drink VALUES ('Coca-Cola', NULL, '240')
+INSERT INTO Drink VALUES ('Coca-Cola Zero', NULL, '0')
+INSERT INTO Drink VALUES ('Diet Coke', NULL, '0')
+INSERT INTO Drink VALUES ('Sprite', NULL, '240')
+INSERT INTO Drink VALUES ('Simply Lemonade', NULL, '160');
