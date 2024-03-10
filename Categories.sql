@@ -93,3 +93,44 @@ INSERT INTO Toppings VALUES ('Green Peppers', '5', '1', '0', '1','A row of fresh
 INSERT INTO Toppings VALUES ('BAR-B-QUE Sauce', '50', '15', '0', '400', 'Rich, smoky Cattlemen’s Brand BBQ sauce.');
 INSERT INTO Toppings VALUES ('Hot Sauce', '0', '0', '0', '200', 'Frank’s Original Hot Sauce – for an extra kick to your sandwiches.');
 INSERT INTO Toppings VALUES ('A1 Sauce', '15', '3', '0', '280', 'The classic A1 Original Steak Sauce.');
+
+
+/* Mason's Work: Burgers & Fries Below */
+
+CREATE TABLE Burgers (
+			Burgers_ID int IDENTITY PRIMARY KEY,
+			BurgerName varchar(20) not null,
+			Cals varchar(10) default(0) not null,
+			Carbs nchar(10) default(0) not null,
+			TotalFat nchar(10) default(0) not null,
+			Sodium smallint default(0) null,
+			[Description] varchar(150) null
+			);
+
+INSERT INTO Burgers VALUES
+	('Hamburger','840','39','43','430','Fresh, hand-formed patties hot off the grill and placed on a soft, toasted sesame seed bun. Choose as many toppings as you want.')
+	,('Cheeseburger','980','40','55','1050','American-style cheese melted between fresh patties and placed on a soft, toasted sesame seed bun. Choose as many toppings as you want.')
+	,('Bacon Burger','920','39','50','690','Hand-formed patties hot off the grill, layered with strips of crispy apple-wood smoked bacon and placed on a soft, toasted sesame seed bun. Choose as many toppings as you want.')
+	,('Bacon Cheeseburger','1060','40','62','1310','Fresh patties hot off the grill with American-style cheese and crispy apple-wood smoked bacon. Placed on a soft, toasted sesame seed bun. Choose as many toppings as you want.')
+	,('Little Hamburger','540','39','26','380','Fresh, hand-formed patty hot off the grill. Add as many toppings as you want.')
+	,('Little Cheeseburger','610','39.5','32','690','Fresh, hand-formed patty hot off the grill with American-style cheese. Add as many toppings as you want.')
+	,('Little Bacon Burger','620','39','33','640','Fresh, hand-formed patty hot off the grill with strips of crispy apple-wood smoked bacon on top. Add as many toppings as you want.')
+	,('Little Bacon Cheeseburger','690','39.5','39','950','Fresh, hand-formed patty hot off the grill with American-style cheese and strips of crispy apple-wood smoked bacon on top. Add as many toppings as you want.')
+GO
+
+CREATE TABLE Fries (
+			Fries_ID int IDENTITY PRIMARY KEY,
+			FriesName varchar(30) not null,
+			Cals varchar(10) default(0) not null,
+			Carbs nchar(10) default(0) not null,
+			TotalFat nchar(10) default(0) not null,
+			Sodium smallint default(0) null,
+			[Description] varchar(300) null
+			);
+
+INSERT INTO Fries VALUES
+	('Five Guys Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside.')
+	,('Cajun Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside.')
+GO
+
+/*-*/
