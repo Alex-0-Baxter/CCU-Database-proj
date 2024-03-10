@@ -7,9 +7,10 @@ GO
 CREATE DATABASE  The_Better_Team_DB
 GO
 
---DROP Table IF exists Categories
+DROP Table IF exists dbo.Categories
+GO
 
-CREATE TABLE Categories (
+CREATE TABLE dbo.Categories (
     Cat_ID tinyint NOT NULL PRIMARY KEY,
     FK_Burgers_ID int NULL,
     FK_DogType_ID int NULL,
@@ -21,7 +22,7 @@ CREATE TABLE Categories (
     --FK_Order_ID varchar(26) NULL
 );
 
-
+/*
 ALTER TABLE Categories
 ADD FOREIGN KEY (FK_Burgers_ID) REFERENCES Burgers(Burgers_ID); 
 ALTER TABLE Categories
@@ -41,13 +42,13 @@ ADD FOREIGN KEY (FK_Shake_ID) REFERENCES Milkshakes(Shake_ID);
 
 ALTER TABLE Categories
 ADD FOREIGN KEY (FK_Topping_ID) REFERENCES Toppings(Topping_ID); 
-
+*/
 
 /* Mason's Work: Burgers & Fries Below */
---DROP Table IF exists Burgers
---GO
+DROP Table IF exists dbo.Burgers
+GO
 
-CREATE TABLE Burgers (
+CREATE TABLE dbo.Burgers (
 	Burgers_ID int IDENTITY PRIMARY KEY,
 	BurgerName varchar(35) not null,
 	Cals varchar(10) default(0) not null,
@@ -58,9 +59,9 @@ CREATE TABLE Burgers (
 	);
 GO
 
---DROP Table IF exists Dogs
---GO
-CREATE TABLE Dogs(
+DROP Table IF exists dbo.Dogs
+GO
+CREATE TABLE dbo.Dogs(
 	DogType_ID INT IDENTITY PRIMARY KEY
 	,DogName varchar(30) NOT NULL
 	,Price nchar(10) default(0) NOT NULL
@@ -71,10 +72,10 @@ CREATE TABLE Dogs(
 );
 GO
 
---DROP Table IF exists Sandwiches
---GO
+DROP Table IF exists dbo.Sandwiches
+GO
 
-CREATE TABLE Sandwiches (
+CREATE TABLE dbo.Sandwiches (
 	 Sandwich_ID INT IDENTITY PRIMARY KEY
 	,SandwichName varchar(30) NOT NULL
 	,Price nchar(10) default(0) NULL
@@ -86,10 +87,10 @@ CREATE TABLE Sandwiches (
 );
 GO
 
-DROP Table IF exists Fries
+DROP Table IF exists dbo.Fries
 GO
 
-CREATE TABLE Fries (
+CREATE TABLE dbo.Fries (
 	Fries_ID int IDENTITY PRIMARY KEY,
 	FriesName varchar(30) not null,
 	Cals varchar(10) default(0) not null,
@@ -100,10 +101,10 @@ CREATE TABLE Fries (
 	);
 GO
 
---DROP Table IF exists Drinks
---GO
+DROP Table IF exists dbo.Drinks
+GO
 
-CREATE TABLE Drinks (
+CREATE TABLE dbo.Drinks (
 	 Drink_ID INT IDENTITY PRIMARY KEY
 	,DrinkName varchar(30) NULL
 	,Price varchar(10) default(0) NULL
@@ -112,10 +113,10 @@ CREATE TABLE Drinks (
 );
 GO
 
---DROP Table IF exists Milkshakes
---GO
+DROP Table IF exists dbo.Milkshakes
+GO
 
-CREATE TABLE Milkshakes (
+CREATE TABLE dbo.Milkshakes (
 	 Shake_ID INT IDENTITY PRIMARY KEY
 	,ShakeName varchar(30) NOT NULL
 	,Price nchar(10) default(0) NULL
@@ -126,10 +127,10 @@ CREATE TABLE Milkshakes (
 );
 GO
 
---DROP Table IF exists Toppings
---GO
+DROP Table IF exists dbo.Toppings
+GO
 
-CREATE TABLE Toppings (
+CREATE TABLE dbo.Toppings (
 	Topping_ID int IDENTITY PRIMARY KEY,
 	ToppingName varchar(20) not null,
 	Cals varchar(10) default(0) not null,
@@ -139,14 +140,14 @@ CREATE TABLE Toppings (
 	[Description] varchar(150) null
 	);
 GO
-
+/*
 INSERT INTO Categories (Cat_ID, FK_Burgers_ID, FK_DogType_ID, FK_Sandwich_ID, FK_Fries_ID, FK_Drink_ID, FK_Shake_ID, FK_Topping_ID)
 VALUES   (1, 1, 1, 1, 1, 1, 1, 1)
 		,(2, 2, 2, 2, 2, 2, 2, 2);
 
 GO
-
-INSERT INTO Burgers VALUES
+*/
+INSERT INTO dbo.Burgers VALUES
 	 ('Hamburger','840','39','43','430','Fresh, hand-formed patties hot off the grill and placed on a soft, toasted sesame seed bun. Choose as many toppings as you want.')
 	,('Cheeseburger','980','40','55','1050','American-style cheese melted between fresh patties and placed on a soft, toasted sesame seed bun. Choose as many toppings as you want.')
 	,('Bacon Burger','920','39','50','690','Hand-formed patties hot off the grill, layered with strips of crispy apple-wood smoked bacon and placed on a soft, toasted sesame seed bun. Choose as many toppings as you want.')
@@ -157,26 +158,26 @@ INSERT INTO Burgers VALUES
 	,('Little Bacon Cheeseburger','690','39.5','39','950','Fresh, hand-formed patty hot off the grill with American-style cheese and strips of crispy apple-wood smoked bacon on top. Add as many toppings as you want.')
 GO
 
-INSERT INTO Dogs VALUES 
+INSERT INTO dbo.Dogs VALUES 
 	 ('Hot Dog','7.79' , '520', '40','1103', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior with any of your favorite toppings.')
 	,('Cheese Dog','8.89','590','40.5','1440', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior with a layer of American-style cheese on top and any of your favorite toppings')
 	,('Bacon Dog','8.59','600','40','1390', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior with a layer of apple-wood smoked bacon and any of your favorite toppings')
 	,('Bacon Cheese Dog','9.79','670','40.5','1700', 'All-beef hot dog, split and grilled lengthwise for a caramelized exterior, American-style cheese on top, a layer of apple-wood smoked bacon and any of your favorite toppings.')
 GO
 
-INSERT INTO Sandwiches VALUES 
+INSERT INTO dbo.Sandwiches VALUES 
 	 ('Veggie Sandwich', '5.69', '280', '60', '15', '1040', 'Freshly grilled onions, mushrooms and green peppers layered with lettuce and tomatoes on a soft, toasted sesame seed bun. Or start with the bun and build your own from scratch. Not a veggie burger.')
 	,('Cheese Veggie Sandwich', '6.79', '420', '60.7', '21', '1350', 'Freshly grilled onions, mushrooms and green peppers layered with lettuce, tomatoes and slices of American-style cheese on a soft, toasted sesame seed bun. Or start with the bun and cheese and build your own from scratch. Not a veggie burger.')
 	,('Grilled Cheese', '6.49', '470', '41', '26', '715', 'Slices of American-style cheese melted on an inside-out sesame seed bun with toppings of your choice and grilled until golden brown.')
 	,('BLT', '8.39', '600', '42', '34', '931', 'Strips of crispy apple-wood smoked bacon from one of America’s last smokehouses, fresh tomato slices, mayo and hand-shredded lettuce on a soft, toasted sesame seed bun.');
 GO
 
-INSERT INTO Fries VALUES
+INSERT INTO dbo.Fries VALUES
 	 ('Five Guys Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside.')
 	,('Cajun Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside.')
 GO
 
-INSERT INTO Drinks VALUES
+INSERT INTO dbo.Drinks VALUES
 	 ('Regular', '2.95', '0-360')
 	,('Large', '3.25', '0-520')
 	,('Dasani', '2.95', '0')
@@ -189,7 +190,7 @@ INSERT INTO Drinks VALUES
 	
  GO
 
- INSERT INTO Milkshakes VALUES
+ INSERT INTO dbo.Milkshakes VALUES
 	('Bacon','6.09','80','0','260','Crispy, sweet applewood-smoked bacon chopped and mixed for a salty crunch in your shake.')
 	,('Bananas','6.09','30', '7-28','2-10','Real bananas in your handspun milkshake.')
 	,('Strawberries','6.09','20','0','5-20','Fresh strawberries in homemade simple syrup.')
@@ -201,7 +202,7 @@ INSERT INTO Drinks VALUES
 GO
 
 
-INSERT INTO Toppings VALUES 
+INSERT INTO dbo.Toppings VALUES 
 	 ('Mayo', '110', '0', '11', '70', 'A layer of mayonnaise, always evenly spread. Thick, smooth and never too much or too little, unless you ask for more or less!')
 	,('Pickles', '5', '1', '0', '260', 'Five Mount Olive Pickles to bring that salty, briny, and crunchy texture to your Five Guys burger, dog or sandwich.')
 	,('Tomoatoes', '10', '2', '0', '3', 'Two slices for an even tomato-to-bite ratio every time.')
@@ -222,12 +223,12 @@ GO
 
 
 
-SELECT * FROM Categories
-SELECT * FROM Burgers
-SELECT * FROM Dogs
-SELECT * FROM Sandwiches
-SELECT * FROM Fries
-SELECT * FROM Drinks
-SELECT * FROM Milkshakes
-SELECT * FROM Toppings
+SELECT * FROM dbo.Categories
+SELECT * FROM dbo.Burgers
+SELECT * FROM dbo.Dogs
+SELECT * FROM dbo.Sandwiches
+SELECT * FROM dbo.Fries
+SELECT * FROM dbo.Drinks
+SELECT * FROM dbo.Milkshakes
+SELECT * FROM dbo.Toppings
 /*-*/
