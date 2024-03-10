@@ -56,7 +56,6 @@ CREATE TABLE Shake (
 	,Carbs varchar(10) default(0) NOT NULL
 	,Sodium varchar(10) default(0) NOT NULL
 	,ShakeDescription varchar(2000) NULL
-
 );
 
 
@@ -99,7 +98,6 @@ CREATE TABLE Drink (
 	,DrinkName varchar(30) NOT NULL
 	,Price nchar(10) default(0) NULL
 	,Cals varchar(10) default(0) NOT NULL
-	,DrinkDescription varchar(2000) NULL
 );
 
 INSERT INTO Drink VALUES ('Regular', '2.95', '0-360')
@@ -111,3 +109,19 @@ INSERT INTO Drink VALUES ('Coca-Cola Zero', NULL, '0')
 INSERT INTO Drink VALUES ('Diet Coke', NULL, '0')
 INSERT INTO Drink VALUES ('Sprite', NULL, '240')
 INSERT INTO Drink VALUES ('Simply Lemonade', NULL, '160');
+
+CREATE TABLE Sandwich (
+	Sandwich_ID INT IDENTITY PRIMARY KEY
+	,SandwichName varchar(30) NOT NULL
+	,Price nchar(10) default(0) NULL
+	,Cals varchar(10) default(0) NOT NULL
+	,Carbs varchar(10) default(0) NOT NULL
+	,TotalFat varchar(10) default(0) not null,
+	,Sodium varchar(10) default(0) NOT NULL
+	,ShakeDescription varchar(2000) NULL
+);
+
+INSERT INTO Sandwich VALUES ('Veggie Sandwich', '5.69', '280', '60', '15', '1040', 'Freshly grilled onions, mushrooms and green peppers layered with lettuce and tomatoes on a soft, toasted sesame seed bun. Or start with the bun and build your own from scratch. Not a veggie burger.')
+INSERT INTO Sandwich VALUES ('Cheese Veggie Sandwich', '6.79', '420', '60.7', '21', '1350', 'Freshly grilled onions, mushrooms and green peppers layered with lettuce, tomatoes and slices of American-style cheese on a soft, toasted sesame seed bun. Or start with the bun and cheese and build your own from scratch. Not a veggie burger.')
+INSERT INTO Sandwich VALUES ('Grilled Cheese', '6.49', '470', '41', '26', '715', 'Slices of American-style cheese melted on an inside-out sesame seed bun with toppings of your choice and grilled until golden brown.')
+INSERT INTO Sandwich VALUES ('BLT', '8.39', '600', '42', '34', '931', 'Strips of crispy apple-wood smoked bacon from one of America’s last smokehouses, fresh tomato slices, mayo and hand-shredded lettuce on a soft, toasted sesame seed bun.');
