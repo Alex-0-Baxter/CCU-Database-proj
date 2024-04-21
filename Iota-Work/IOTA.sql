@@ -83,7 +83,7 @@ CREATE TABLE dbo.Sandwiches (
 	,Carbs varchar(10) default(0) NOT NULL
 	,TotalFat varchar(10) default(0) not null
 	,Sodium varchar(10) default(0) NOT NULL
-	,ShakeDescription varchar(2000) NULL
+	,SandwichDescription varchar(2000) NULL
 );
 GO
 
