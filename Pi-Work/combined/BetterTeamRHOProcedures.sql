@@ -746,6 +746,39 @@ BEGIN
 END
 GO
 
+
+CREATE OR ALTER PROCEDURE PickupOrder
+@orderNumber INT
+AS BEGIN
+	DECLARE @status INT
+	SET @orderNumber = (SELECT OrderID FROM Orders WHERE @orderNumber = OrderID)
+	SET @status = (SELECT StatusID FROM OrderStatus WHERE ItemStatus LIKE 'bagged')
+	UPDATE Orders SET fk_OrderStatus = @status +1  WHERE OrderID = @orderNumber
+END
+GO
+
+CREATE OR ALTER PROCEDURE UpdateOrderStatus
+@orderNumber INT
+AS BEGIN
+	DECLARE @status INT
+	SET @orderNumber = (SELECT OrderID FROM Orders WHERE @orderNumber = OrderID)
+	SET @status = (SELECT StatusID FROM OrderStatus)
+	UPDATE Orders SET fk_OrderStatus = @status WHERE OrderID = @orderNumber
+END
+GO
+
+
+CREATE OR ALTER PROCEDURE Cancel
+@orderNumber INT
+AS BEGIN
+	DECLARE @status INT
+	SET @orderNumber = (SELECT OrderID FROM Orders WHERE @orderNumber = OrderID)
+	SET @status = (SELECT StatusID FROM OrderStatus WHERE ItemStatus LIKE 'canceled')
+	UPDATE Orders SET fk_OrderStatus = @status  WHERE OrderID = @orderNumber
+END
+GO
+
+
 -------BACKUPS-----------
 AS BEGIN
 	 DECLARE @db VARCHAR(63) = N'FiveGuys'
