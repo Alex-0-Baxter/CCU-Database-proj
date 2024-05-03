@@ -1,3 +1,12 @@
+/****************************************
+*PLEASE READ							              *
+*EXECUTE QUERIES IN THIS ORDER		    	*
+*TABLES								                	*
+*EMPLOYEE INSERTS					            	*
+*PROCEDURES								              *
+*****************************************/
+
+
 Use teamBetter_Pi
 GO
 
