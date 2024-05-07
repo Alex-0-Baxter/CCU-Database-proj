@@ -207,12 +207,12 @@ INSERT INTO dbo.Sandwiches VALUES
 	 ('Veggie Sandwich', '5.69', '280', '60', '15', '1040', 'Freshly grilled onions, mushrooms and green peppers layered with lettuce and tomatoes on a soft, toasted sesame seed bun. Or start with the bun and build your own from scratch. Not a veggie burger.')
 	,('Cheese Veggie Sandwich', '6.79', '420', '60.7', '21', '1350', 'Freshly grilled onions, mushrooms and green peppers layered with lettuce, tomatoes and slices of American-style cheese on a soft, toasted sesame seed bun. Or start with the bun and cheese and build your own from scratch. Not a veggie burger.')
 	,('Grilled Cheese', '6.49', '470', '41', '26', '715', 'Slices of American-style cheese melted on an inside-out sesame seed bun with toppings of your choice and grilled until golden brown.')
-	,('BLT', '8.39', '600', '42', '34', '931', 'Strips of crispy apple-wood smoked bacon from one of America’s last smokehouses, fresh tomato slices, mayo and hand-shredded lettuce on a soft, toasted sesame seed bun.');
+	,('BLT', '8.39', '600', '42', '34', '931', 'Strips of crispy apple-wood smoked bacon from one of Americaâ€™s last smokehouses, fresh tomato slices, mayo and hand-shredded lettuce on a soft, toasted sesame seed bun.');
 GO
 
 INSERT INTO dbo.Fries VALUES
-	 ('Five Guys Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside.')
-	,('Cajun Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside.')
+	 ('Five Guys Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside.')
+	,('Cajun Style','530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside.')
 GO
 
 INSERT INTO dbo.Drinks VALUES
@@ -236,7 +236,7 @@ INSERT INTO dbo.Drinks VALUES
 	,('Oreo Cookies','6.09','65','10-40','53-210','Crushed Oreo Cookies mixed with creamy malt.')
 	,('Penut Butter','6.09','90','4-16','110-440','Natural, creamy peanut butter with a touch of honey.')
 	,('Salted Caramel','6.09','45','10-41','24-98','Sweet caramel with a savory kick.')
-	,('Lotus Biscoff','6.09','0','0','0','Lotus’ classic caramelized cookie pieces.')
+	,('Lotus Biscoff','6.09','0','0','0','Lotusâ€™ classic caramelized cookie pieces.')
 GO
 
 
@@ -248,13 +248,13 @@ INSERT INTO dbo.Toppings VALUES
 	,('Grilled Onions', '10', '2', '0', '1', 'Fresh onions, hand chopped and grilled on our flat top grill.')
 	,('Grilled Mushrooms', '20', '1', '0', '55', 'Baby portobella mushrooms, hand picked and freshly packed. Grilled until golden for extra taste and body.')
 	,('Ketchup', '30', '5', '0', '160', 'Heinz ketchup only, please.')
-	,('Mustard', '0', '0', '0', '55', 'French’s mustard. You can always get extra sauce on the side – just ask.')
+	,('Mustard', '0', '0', '0', '55', 'Frenchâ€™s mustard. You can always get extra sauce on the side â€“ just ask.')
 	,('Relish', '15', '4', '0', '85','Sweet and sour relish. ')
 	,('Onions', '10', '2', '0','','Fresh, hand-chopped, and evenly spread.')
-	,('Jalapeno Peppers', '5', '<1', '0', '0','Fresh Jalapeño peppers chopped in-house for the spiciest bite.')
+	,('Jalapeno Peppers', '5', '<1', '0', '0','Fresh JalapeÃ±o peppers chopped in-house for the spiciest bite.')
 	,('Green Peppers', '5', '1', '0', '1','A row of fresh, thinly sliced green peppers.')
-	,('BAR-B-QUE Sauce', '50', '15', '0', '400', 'Rich, smoky Cattlemen’s Brand BBQ sauce.')
-	,('Hot Sauce', '0', '0', '0', '200', 'Frank’s Original Hot Sauce – for an extra kick to your sandwiches.')
+	,('BAR-B-QUE Sauce', '50', '15', '0', '400', 'Rich, smoky Cattlemenâ€™s Brand BBQ sauce.')
+	,('Hot Sauce', '0', '0', '0', '200', 'Frankâ€™s Original Hot Sauce â€“ for an extra kick to your sandwiches.')
 	,('A1 Sauce', '15', '3', '0', '280', 'The classic A1 Original Steak Sauce.')
 GO
 
@@ -284,7 +284,7 @@ DROP TABLE IF EXISTS Employees;*/
 
 CREATE TABLE Positions (
 	PositionID int IDENTITY PRIMARY KEY,
-	PositionName varchar(255) NOT NULL
+	PositionTitle varchar(255) NOT NULL
 );
 
 GO
@@ -302,11 +302,11 @@ CREATE TABLE Employees (
 );
 GO
 
-INSERT INTO Positions (PositionName) VALUES ('Cook');
-INSERT INTO Positions (PositionName) VALUES ('Server');
-INSERT INTO Positions (PositionName) VALUES ('Cashier');
-INSERT INTO Positions (PositionName) VALUES ('Manager');
-INSERT INTO Positions (PositionName) VALUES ('Owner');
+INSERT INTO Positions (PositionTitle) VALUES ('Cook');
+INSERT INTO Positions (PositionTitle) VALUES ('Server');
+INSERT INTO Positions (PositionTitle) VALUES ('Cashier');
+INSERT INTO Positions (PositionTitle) VALUES ('Manager');
+INSERT INTO Positions (PositionTitle) VALUES ('Owner');
 GO
 DROP TABLE if EXISTS Shifts
 
@@ -521,17 +521,17 @@ INSERT INTO MenuItems2 (MenuName, Price, Calories, Carbs, Fat, Sodium, MenuDescr
 ('Coke Bottle',3.19,'0','0','0','0',''),
 ('Diet Coke Bottle',3.19,'0','0','0','0',''),
 ('Small Drink',3.19,'0','0','0','0',''),
-('Little Fries',4.19,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside. '),
-('Little Cajun Fries',4.19,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside. '),
-('Regular Fries',5.49,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside. '),
-('Cajun Fries',5.49,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside. '),
-('Large Fries',6.99,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside. '),
-('Large Cajun Fries',6.99,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice – firm on the outside and mashed potato on the inside. '),
+('Little Fries',4.19,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside. '),
+('Little Cajun Fries',4.19,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside. '),
+('Regular Fries',5.49,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside. '),
+('Cajun Fries',5.49,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside. '),
+('Large Fries',6.99,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside. '),
+('Large Cajun Fries',6.99,'530-1310','131','41','962','Freshly made boardwalk-style fries, cooked in pure, cholesterol-free, 100% peanut oil, and then showered with a heavy dose of Cajun spice. Cut fresh and cooked twice â€“ firm on the outside and mashed potato on the inside. '),
 ('Shakes',5.99,'20-82','5-19','0','3-11','Rich, smooth.'),
 ('VEGGIE SANDWICH',8.5,'280','60','15','1040','Freshly grilled onions, mushrooms and green peppers layered with lettuce and tomatoes on a soft, toasted sesame seed bun. Or start with the bun and build your own from scratch. Not a veggie burger.'),
 ('CHEESE VEGGIE SANDWICH',10.5,'420','60.7','21','1350','Freshly grilled onions, mushrooms and green peppers layered with lettuce, tomatoes and slices of American-style cheese on a soft, toasted sesame seed bun. Or start with the bun and cheese and build your own from scratch. Not a veggie burger.'),
 ('GRILLED CHEESE',7.5,'470','41','26','715','Slices of American-style cheese melted on an inside-out sesame seed bun with toppings of your choice and grilled until golden brown.'),
-('BLT',7.5,'600','42','34','931','Strips of crispy apple-wood smoked bacon from one of America’s last smokehouses, fresh tomato slices, mayo and hand-shredded lettuce on a soft, toasted sesame seed bun.'),
+('BLT',7.5,'600','42','34','931','Strips of crispy apple-wood smoked bacon from one of Americaâ€™s last smokehouses, fresh tomato slices, mayo and hand-shredded lettuce on a soft, toasted sesame seed bun.'),
 ('Bacon',0,'80','0','7','260','Crispy, sweet applewood-smoked bacon chopped and mixed for a salty crunch in your shake.'),
 ('Bananas',0,'30','7-28','0','2-10','Real bananas in your handspun milkshake.'),
 ('Reese''s Cups',0,'150','16','8','98','REESE''S classic combination of chocolate and peanut butter.'),
@@ -549,13 +549,13 @@ INSERT INTO MenuItems2 (MenuName, Price, Calories, Carbs, Fat, Sodium, MenuDescr
 ('Grilled Onions',0,'10','2','0','1','Fresh onions, hand chopped and grilled on our flat top grill.'),
 ('Grilled Mushrooms',0,'20','1','0','55','Baby portobella mushrooms, hand picked and freshly packed. Grilled until golden for extra taste and body.'),
 ('Ketchup',0,'30','5','0','160','Heinz ketchup only, please.'),
-('Mustard',0,'0','0','0','55','French’s mustard. You can always get extra sauce on the side – just ask.'),
+('Mustard',0,'0','0','0','55','Frenchâ€™s mustard. You can always get extra sauce on the side â€“ just ask.'),
 ('Relish',0,'15','4','0','85','Sweet and sour relish.'),
 ('Onions',0,'10','2','0','0','Fresh, hand-chopped, and evenly spread.'),
-('Jalapeno Peppers',0,'5','<1','0','0','Fresh Jalapeño peppers chopped in-house for the spiciest bite.'),
+('Jalapeno Peppers',0,'5','<1','0','0','Fresh JalapeÃ±o peppers chopped in-house for the spiciest bite.'),
 ('Green Peppers',0,'5','1','0','1','A row of fresh, thinly sliced green peppers.'),
-('Bar-b-Que Sauce',0,'50','15','0','400','Rich, smoky Cattlemen’s Brand BBQ sauce.'),
-('Hot Sauce',0,'0','0','0','1','Frank’s Original Hot Sauce – for an extra kick to your sandwiches.'),
+('Bar-b-Que Sauce',0,'50','15','0','400','Rich, smoky Cattlemenâ€™s Brand BBQ sauce.'),
+('Hot Sauce',0,'0','0','0','1','Frankâ€™s Original Hot Sauce â€“ for an extra kick to your sandwiches.'),
 ('A1 Sauce',0,'15','3','0','280','The classic A1 Original Steak Sauce.'),
 ('NO BUN (BOWL)',0,'15','3','0','280',''),
 ('NO BUN (LETTUCE)',0,'15','3','0','280',''),
